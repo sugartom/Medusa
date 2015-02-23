@@ -2,7 +2,7 @@
 	<app>
 	<input>
 		<name>HelloWorld</name>
-		<wwid>your_wid_here</wwid>
+		<wwid>tom</wwid>
 		<cmdpush>ws_c2dm</cmdpush>
 		<gvar>GVARINPUT=</gvar>
 		<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>

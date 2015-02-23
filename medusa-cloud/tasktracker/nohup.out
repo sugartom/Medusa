@@ -1,0 +1,852 @@
+68.181.99.207 - - [03/Feb/2015 18:19:43] "POST / HTTP/1.1" 200 -
+task tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203181943.txt'
+68.181.99.207 - - [03/Feb/2015 18:19:52] "POST / HTTP/1.1" 200 -
+task tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203181952.txt'
+68.181.99.207 - - [03/Feb/2015 18:20:01] "POST / HTTP/1.1" 200 -
+task tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203182001.txt'
+[<socket._socketobject object at 0x7f72e3096130>]
+{}
+Tue Feb  3 18:07:01 2015 Server Starts - 68.181.99.207:9001
+postvars = {'hello_ws.xml': ['<xml>\r\n\t<app>\r\n\t<input>\r\n\t\t<name>HelloWorld</name>\r\n\t\t<wwid>your_wid_here</wwid>\r\n\t\t<cmdpush>ws_c2dm</cmdpush>\r\n\t\t<gvar>GVARINPUT=</gvar>\r\n\t\t<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>\r\n\t\t<timeout>7 hour</timeout>\r\n\t</input>\r\n\t\t<stage>\r\n\t\t\t<name>HelloWorld</name> <type>SPC</type>\r\n\t\t\t<binary>medusalet_helloworld</binary>\t\t\r\n\t\t\t<trigger>none</trigger>\r\n\t\t\t<inst>Hello</inst> \r\n\t\t</stage>\r\n\t</app>\r\n</xml>']}
+pair =  <xml>
+	<app>
+	<input>
+		<name>HelloWorld</name>
+		<wwid>your_wid_here</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+		<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>
+		<timeout>7 hour</timeout>
+	</input>
+		<stage>
+			<name>HelloWorld</name> <type>SPC</type>
+			<binary>medusalet_helloworld</binary>		
+			<trigger>none</trigger>
+			<inst>Hello</inst> 
+		</stage>
+	</app>
+</xml>
+program/921hello_ws.xml
+filenames=[['program/1423016383_8242.xml', 'HelloWorld']]
+[['program/1423016383_8242.xml', 'HelloWorld']]
+parent: 28760, child: 28935
+accepted
+postvars = {'hello_ws.xml': ['<xml>\r\n\t<app>\r\n\t<input>\r\n\t\t<name>HelloWorld</name>\r\n\t\t<wwid>your_wid_here</wwid>\r\n\t\t<cmdpush>ws_c2dm</cmdpush>\r\n\t\t<gvar>GVARINPUT=</gvar>\r\n\t\t<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>\r\n\t\t<timeout>7 hour</timeout>\r\n\t</input>\r\n\t\t<stage>\r\n\t\t\t<name>HelloWorld</name> <type>SPC</type>\r\n\t\t\t<binary>medusalet_helloworld</binary>\t\t\r\n\t\t\t<trigger>none</trigger>\r\n\t\t\t<inst>Hello</inst> \r\n\t\t</stage>\r\n\t</app>\r\n</xml>']}
+pair =  <xml>
+	<app>
+	<input>
+		<name>HelloWorld</name>
+		<wwid>your_wid_here</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+		<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>
+		<timeout>7 hour</timeout>
+	</input>
+		<stage>
+			<name>HelloWorld</name> <type>SPC</type>
+			<binary>medusalet_helloworld</binary>		
+			<trigger>none</trigger>
+			<inst>Hello</inst> 
+		</stage>
+	</app>
+</xml>
+program/8772hello_ws.xml
+filenames=[['program/1423016392_62.xml', 'HelloWorld']]
+[['program/1423016392_62.xml', 'HelloWorld']]
+parent: 28760, child: 28939
+postvars = {'hello_ws.xml': ['<xml>\r\n\t<app>\r\n\t<input>\r\n\t\t<name>HelloWorld</name>\r\n\t\t<wwid>your_wid_here</wwid>\r\n\t\t<cmdpush>ws_c2dm</cmdpush>\r\n\t\t<gvar>GVARINPUT=</gvar>\r\n\t\t<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>\r\n\t\t<timeout>7 hour</timeout>\r\n\t</input>\r\n\t\t<stage>\r\n\t\t\t<name>HelloWorld</name> <type>SPC</type>\r\n\t\t\t<binary>medusalet_helloworld</binary>\t\t\r\n\t\t\t<trigger>none</trigger>\r\n\t\t\t<inst>Hello</inst> \r\n\t\t</stage>\r\n\t</app>\r\n</xml>']}
+pair =  <xml>
+	<app>
+	<input>
+		<name>HelloWorld</name>
+		<wwid>your_wid_here</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+		<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>
+		<timeout>7 hour</timeout>
+	</input>
+		<stage>
+			<name>HelloWorld</name> <type>SPC</type>
+			<binary>medusalet_helloworld</binary>		
+			<trigger>none</trigger>
+			<inst>Hello</inst> 
+		</stage>
+	</app>
+</xml>
+program/3255hello_ws.xml
+filenames=[['program/1423016401_3414.xml', 'HelloWorld']]
+[['program/1423016401_3414.xml', 'HelloWorld']]
+parent: 28760, child: 28961
+postvars = {'hello_ws.xml': ['<xml>\r\n\t<app>\r\n\t<input>\r\n\t\t<name>HelloWorld</name>\r\n\t\t<wwid>your_wid_here</wwid>\r\n\t\t<cmdpush>ws_c2dm</cmdpush>\r\n\t\t<gvar>GVARINPUT=</gvar>\r\n\t\t<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>\r\n\t\t<timeout>7 hour</timeout>\r\n\t</input>\r\n\t\t<stage>\r\n\t\t\t<name>HelloWorld</name> <type>SPC</type>\r\n\t\t\t<binary>medusalet_helloworld</binary>\t\t\r\n\t\t\t<trigger>none</trigger>\r\n\t\t\t<inst>Hello</inst> \r\n\t\t</stage>\r\n\t</app>\r\n</xml>']}
+pair =  <xml>
+	<app>
+	<input>
+		<name>HelloWorld</name>
+		<wwid>your_wid_here</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+	68.181.99.207 - - [03/Feb/2015 18:20:41] "POST / HTTP/1.1" 200 -
+task tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203182041.txt'
+68.181.99.207 - - [03/Feb/2015 18:21:26] "POST / HTTP/1.1" 200 -
+task tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203182127.txt'
+68.181.99.207 - - [03/Feb/2015 18:22:27] "POST / HTTP/1.1" 200 -
+task tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203182227.txt'
+New connection from 48
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+68.181.99.207 - - [03/Feb/2015 18:24:01] "POST / HTTP/1.1" 200 -
+task tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203182401.txt'
+Traceback (most recent call last):
+  File "./mdscript_acceptor.py", line 186, in <module>
+    httpd = server_class((HOST_NAME, MEDUSA_PORT), MyHandler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+PHP Fatal error:  Uncaught exception 'ZMQSocketException' with message 'Failed to bind the ZMQ: Address already in use' in /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/vendor/react/zmq/src/React/ZMQ/SocketWrapper.php:114
+Stack trace:
+#0 [internal function]: ZMQSocket->bind('tcp://127.0.0.1...')
+#1 /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/vendor/react/zmq/src/React/ZMQ/SocketWrapper.php(114): call_user_func_array(Array, Array)
+#2 /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/bin/chat-server.php(13): React\ZMQ\SocketWrapper->__call('bind', Array)
+#3 /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/bin/chat-server.php(13): React\ZMQ\SocketWrapper->bind('tcp://127.0.0.1...')
+#4 {main}
+  thrown in /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/vendor/react/zmq/src/React/ZMQ/SocketWrapper.php on line 114
+	<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>
+		<timeout>7 hour</timeout>
+	</input>
+		<stage>
+			<name>HelloWorld</name> <type>SPC</type>
+			<binary>medusalet_helloworld</binary>		
+			<trigger>none</trigger>
+			<inst>Hello</inst> 
+		</stage>
+	</app>
+</xml>
+program/4622hello_ws.xml
+filenames=[['program/1423016441_2280.xml', 'HelloWorld']]
+[['program/1423016441_2280.xml', 'HelloWorld']]
+parent: 28760, child: 28966
+postvars = {'hello_ws.xml': ['<xml>\r\n\t<app>\r\n\t<input>\r\n\t\t<name>HelloWorld</name>\r\n\t\t<wwid>your_wid_here</wwid>\r\n\t\t<cmdpush>ws_c2dm</cmdpush>\r\n\t\t<gvar>GVARINPUT=</gvar>\r\n\t\t<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>\r\n\t\t<timeout>7 hour</timeout>\r\n\t</input>\r\n\t\t<stage>\r\n\t\t\t<name>HelloWorld</name> <type>SPC</type>\r\n\t\t\t<binary>medusalet_helloworld</binary>\t\t\r\n\t\t\t<trigger>none</trigger>\r\n\t\t\t<inst>Hello</inst> \r\n\t\t</stage>\r\n\t</app>\r\n</xml>']}
+pair =  <xml>
+	<app>
+	<input>
+		<name>HelloWorld</name>
+		<wwid>your_wid_here</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+		<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>
+		<timeout>7 hour</timeout>
+	</input>
+		<stage>
+			<name>HelloWorld</name> <type>SPC</type>
+			<binary>medusalet_helloworld</binary>		
+			<trigger>none</trigger>
+			<inst>Hello</inst> 
+		</stage>
+	</app>
+</xml>
+program/9211hello_ws.xml
+filenames=[['program/1423016486_6841.xml', 'HelloWorld']]
+[['program/1423016486_6841.xml', 'HelloWorld']]
+parent: 28760, child: 28985
+postvars = {'hello_ws.xml': ['<xml>\r\n\t<app>\r\n\t<input>\r\n\t\t<name>HelloWorld</name>\r\n\t\t<wwid>your_wid_here</wwid>\r\n\t\t<cmdpush>ws_c2dm</cmdpush>\r\n\t\t<gvar>GVARINPUT=</gvar>\r\n\t\t<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>\r\n\t\t<timeout>7 hour</timeout>\r\n\t</input>\r\n\t\t<stage>\r\n\t\t\t<name>HelloWorld</name> <type>SPC</type>\r\n\t\t\t<binary>medusalet_helloworld</binary>\t\t\r\n\t\t\t<trigger>none</trigger>\r\n\t\t\t<inst>Hello</inst> \r\n\t\t</stage>\r\n\t</app>\r\n</xml>']}
+pair =  <xml>
+	<app>
+	<input>
+		<name>HelloWorld</name>
+		<wwid>your_wid_here</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+		<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>
+		<timeout>7 hour</timeout>
+	</input>
+		<stage>
+			<name>HelloWorld</name> <type>SPC</type>
+			<binary>medusalet_helloworld</binary>		
+			<trigger>none</trigger>
+			<inst>Hello</inst> 
+		</stage>
+	</app>
+</xml>
+program/5563hello_ws.xml
+filenames=[['program/1423016547_1230.xml', 'HelloWorld']]
+[['program/1423016547_1230.xml', 'HelloWorld']]
+parent: 28760, child: 28992
+postvars = {'hello_ws.xml': ['<xml>\r\n\t<app>\r\n\t<input>\r\n\t\t<name>HelloWorld</name>\r\n\t\t<wwid>your_wid_here</wwid>\r\n\t\t<cmdpush>ws_c2dm</cmdpush>\r\n\t\t<gvar>GVARINPUT=</gvar>\r\n\t\t<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>\r\n\t\t<timeout>7 hour</timeout>\r\n\t</input>\r\n\t\t<stage>\r\n\t\t\t<name>HelloWorld</name> <type>SPC</type>\r\n\t\t\t<binary>medusalet_helloworld</binary>\t\t\r\n\t\t\t<trigger>none</trigger>\r\n\t\t\t<inst>Hello</inst> \r\n\t\t</stage>\r\n\t</app>\r\n</xml>']}
+pair =  <xml>
+	<app>
+	<input>
+		<name>HelloWorld</name>
+		<wwid>your_wid_here</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+		<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>
+		<timeout>7 hour</timeout>
+	</input>
+		<stage>
+			<name>HelloWorld</name> <type>SPC</type>
+			<binary>medusalet_helloworld</binary>		
+			<trigger>none</trigger>
+			<inst>Hello</inst> 
+		</stage>
+	</app>
+</xml>
+program/2950hello_ws.xml
+filenames=[['program/1423016641_7268.xml', 'HelloWorld']]
+[['program/1423016641_7268.xml', 'HelloWorld']]
+parent: 28760, child: 29054
+postvars = {'hello_ws.xml': ['<xml>\r\n\t<app>\r\n\t<input>\r\n\t\t<name>HelloWorld</name>\r\n\t\t<wwid>your_wid_here</wwid>\r\n\t\t<cmdpush>ws_c2dm</cmdpush>\r\n\t\t<gvar>GVARINPUT=</gvar>\r\n\t\t<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>\r\n\t\t<timeout>7 hour</timeout>\r\n\t</input>\r\n\t\t<stage>\r\n\t\t\t<name>HelloWorld</name>68.181.99.207 - - [03/Feb/2015 18:24:12] "POST / HTTP/1.1" 200 -
+task tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203182412.txt'
+Client tom has disconnected.
+New connection from 94
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+68.181.99.207 - - [03/Feb/2015 18:24:33] "POST / HTTP/1.1" 200 -
+task tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203182433.txt'
+Client tom has disconnected.
+New connection from 99
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Client tom has disconnected.
+New connection from 104
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Client tom has disconnected.
+New connection from 109
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Client tom has disconnected.
+New connection from 114
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+68.181.99.207 - - [03/Feb/2015 18:25:56] "POST / HTTP/1.1" 200 -
+task tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203182556.txt'
+Client tom has disconnected.
+New connection from 119
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Client tom has disconnected.
+New connection from 124
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Traceback (most recent call last):
+  File "./mdscript_acceptor.py", line 186, in <module>
+    httpd = server_class((HOST_NAME, MEDUSA_PORT), MyHandler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+PHP Fatal error:  Uncaught exception 'ZMQSocketException' with message 'Failed to bind the ZMQ: Address already in use' in /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/vendor/react/zmq/src/React/ZMQ/SocketWrapper.php:114
+Stack trace:
+#0 [internal function]: ZMQSocket->bind('tcp://127.0.0.1...')
+#1 /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/vendor/react/zmq/src/React/ZMQ/SocketWrapper.php(114): call_user_func_array(Array, Array)
+#2 /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/bin/chat-server.php(13): React\ZMQ\SocketWrapper->__call('bind', Array)
+#3 /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/bin/chat-server.php(13): React\ZMQ\SocketWrapper->bind('tcp://127.0.0.1...')
+#4 {main}
+  thrown in /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/vendor/react/zmq/src/React/ZMQ/SocketWrapper.php on line 114
+Client tom has disconnected.
+New connection from 129
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+68.181.99.207 - - [03/Feb/2015 18:34:53] "POST / HTTP/1.1" 200 -
+ <type>SPC</type>\r\n\t\t\t<binary>medusalet_helloworld</binary>\t\t\r\n\t\t\t<trigger>none</trigger>\r\n\t\t\t<inst>Hello</inst> \r\n\t\t</stage>\r\n\t</app>\r\n</xml>']}
+pair =  <xml>
+	<app>
+	<input>
+		<name>HelloWorld</name>
+		<wwid>your_wid_here</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+		<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>
+		<timeout>7 hour</timeout>
+	</input>
+		<stage>
+			<name>HelloWorld</name> <type>SPC</type>
+			<binary>medusalet_helloworld</binary>		
+			<trigger>none</trigger>
+			<inst>Hello</inst> 
+		</stage>
+	</app>
+</xml>
+program/2510hello_ws.xml
+filenames=[['program/1423016652_8520.xml', 'HelloWorld']]
+[['program/1423016652_8520.xml', 'HelloWorld']]
+parent: 28760, child: 29066
+postvars = {'hello_ws.xml': ['<xml>\r\n\t<app>\r\n\t<input>\r\n\t\t<name>HelloWorld</name>\r\n\t\t<wwid>your_wid_here</wwid>\r\n\t\t<cmdpush>ws_c2dm</cmdpush>\r\n\t\t<gvar>GVARINPUT=</gvar>\r\n\t\t<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>\r\n\t\t<timeout>7 hour</timeout>\r\n\t</input>\r\n\t\t<stage>\r\n\t\t\t<name>HelloWorld</name> <type>SPC</type>\r\n\t\t\t<binary>medusalet_helloworld</binary>\t\t\r\n\t\t\t<trigger>none</trigger>\r\n\t\t\t<inst>Hello</inst> \r\n\t\t</stage>\r\n\t</app>\r\n</xml>']}
+pair =  <xml>
+	<app>
+	<input>
+		<name>HelloWorld</name>
+		<wwid>your_wid_here</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+		<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>
+		<timeout>7 hour</timeout>
+	</input>
+		<stage>
+			<name>HelloWorld</name> <type>SPC</type>
+			<binary>medusalet_helloworld</binary>		
+			<trigger>none</trigger>
+			<inst>Hello</inst> 
+		</stage>
+	</app>
+</xml>
+program/6488hello_ws.xml
+filenames=[['program/1423016673_2837.xml', 'HelloWorld']]
+[['program/1423016673_2837.xml', 'HelloWorld']]
+parent: 28760, child: 29070
+postvars = {'hello_ws.xml': ['<xml>\r\n\t<app>\r\n\t<input>\r\n\t\t<name>HelloWorld</name>\r\n\t\t<wwid>your_wid_here</wwid>\r\n\t\t<cmdpush>ws_c2dm</cmdpush>\r\n\t\t<gvar>GVARINPUT=</gvar>\r\n\t\t<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>\r\n\t\t<timeout>7 hour</timeout>\r\n\t</input>\r\n\t\t<stage>\r\n\t\t\t<name>HelloWorld</name> <type>SPC</type>\r\n\t\t\t<binary>medusalet_helloworld</binary>\t\t\r\n\t\t\t<trigger>none</trigger>\r\n\t\t\t<inst>Hello</inst> \r\n\t\t</stage>\r\n\t</app>\r\n</xml>']}
+pair =  <xml>
+	<app>
+	<input>
+		<name>HelloWorld</name>
+		<wwid>your_wid_here</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+		<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>
+		<timeout>7 hour</timeout>
+	</input>
+		<stage>
+			<name>HelloWorld</name> <type>SPC</type>
+			<binary>medusalet_helloworld</binary>		
+			<trigger>none</trigger>
+			<inst>Hello</inst> 
+		</stage>
+	</app>
+</xml>
+program/6689hello_ws.xml
+filenames=[['program/1423016756_6244.xml', 'HelloWorld']]
+[['program/1423016756_6244.xml', 'HelloWorld']]
+parent: 28760, child: 29077
+postvars = {'hello_ws.xml': ['<xml>\r\n\t<app>\r\n\t<input>\r\n\t\t<name>HelloWorld</name>\r\n\t\t<wwid>your_wid_here</wwid>\r\n\t\t<cmdpush>ws_c2dm</cmdpush>\r\n\t\t<gvar>GVARINPUT=</gvar>\r\n\t\t<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>\r\n\t\t<timeout>7 hour</timeout>\r\n\t</input>\r\n\t\t<stage>\r\n\t\t\t<name>HelloWorld</name> <type>SPC</type>\r\n\t\t\t<binary>medusalet_helloworld</binary>\t\t\r\n\t\t\t<trigger>none</trigger>\r\n\t\t\t<inst>Hello</inst> \r\n\t\t</stage>\r\n\t</app>\r\n</xml>']}
+pair =  <xml>
+	<app>
+	<input>
+		<name>HelloWorld</name>
+		<wwid>your_wid_here</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+		<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>
+		<timeout>7 hour</timeout>
+	</input>
+		<stage>
+			<name>HelloWorld</name> <type>SPC</type>
+			<binary>medusalet_helloworld</binary>		
+			<trigger>none</trigger>
+			<inst>Hello</inst> 
+		</stage>
+	</app>
+</xml>
+program/3907hello_ws.xml
+filenames=[['program/1423017293_2522.xml', 'HelloWorld']]
+[['program/1423017293_2522.xml', 'HelloWorld']]
+python mdserv2.py program/1423017293_2522.xml HelloWorltask tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203183453.txt'
+Client tom has disconnected.
+Traceback (most recent call last):
+  File "./mdscript_acceptor.py", line 186, in <module>
+    httpd = server_class((HOST_NAME, MEDUSA_PORT), MyHandler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+PHP Fatal error:  Uncaught exception 'ZMQSocketException' with message 'Failed to bind the ZMQ: Address already in use' in /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/vendor/react/zmq/src/React/ZMQ/SocketWrapper.php:114
+Stack trace:
+#0 [internal function]: ZMQSocket->bind('tcp://127.0.0.1...')
+#1 /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/vendor/react/zmq/src/React/ZMQ/SocketWrapper.php(114): call_user_func_array(Array, Array)
+#2 /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/bin/chat-server.php(13): React\ZMQ\SocketWrapper->__call('bind', Array)
+#3 /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/bin/chat-server.php(13): React\ZMQ\SocketWrapper->bind('tcp://127.0.0.1...')
+#4 {main}
+  thrown in /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/vendor/react/zmq/src/React/ZMQ/SocketWrapper.php on line 114
+New connection from 134
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Client tom has disconnected.
+New connection from 139
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Client tom has disconnected.
+New connection from 144
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+ <type>SPC</type>\r\n\t\t\t<binary>medusalet_helloworld</binary>\t\t\r\n\t\t\t<trigger>none</trigger>\r\n\t\t\t<inst>Hello</inst> \r\n\t\t</stage>\r\n\t</app>\r\n</xml>']}
+pair =  <xml>
+	<app>
+	<input>
+		<name>HelloWorld</name>
+		<wwid>your_wid_here</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+		<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>
+		<timeout>7 hour</timeout>
+	</input>
+		<stage>
+			<name>HelloWorld</name> <type>SPC</type>
+			<binary>medusalet_helloworld</binary>		
+			<trigger>none</trigger>
+			<inst>Hello</inst> 
+		</stage>
+	</app>
+</xml>
+program/2510hello_ws.xml
+filenames=[['program/1423016652_8520.xml', 'HelloWorld']]
+[['program/1423016652_8520.xml', 'HelloWorld']]
+parent: 28760, child: 29066
+postvars = {'hello_ws.xml': ['<xml>\r\n\t<app>\r\n\t<input>\r\n\t\t<name>HelloWorld</name>\r\n\t\t<wwid>your_wid_here</wwid>\r\n\t\t<cmdpush>ws_c2dm</cmdpush>\r\n\t\t<gvar>GVARINPUT=</gvar>\r\n\t\t<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>\r\n\t\t<timeout>7 hour</timeout>\r\n\t</input>\r\n\t\t<stage>\r\n\t\t\t<name>HelloWorld</name> <type>SPC</type>\r\n\t\t\t<binary>medusalet_helloworld</binary>\t\t\r\n\t\t\t<trigger>none</trigger>\r\n\t\t\t<inst>Hello</inst> \r\n\t\t</stage>\r\n\t</app>\r\n</xml>']}
+pair =  <xml>
+	<app>
+	<input>
+		<name>HelloWorld</name>
+		<wwid>your_wid_here</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+		<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>
+		<timeout>7 hour</timeout>
+	</input>
+		<stage>
+			<name>HelloWorld</name> <type>SPC</type>
+			<binary>medusalet_helloworld</binary>		
+			<trigger>none</trigger>
+			<inst>Hello</inst> 
+		</stage>
+	</app>
+</xml>
+program/6488hello_ws.xml
+filenames=[['program/1423016673_2837.xml', 'HelloWorld']]
+[['program/1423016673_2837.xml', 'HelloWorld']]
+parent: 28760, child: 29070
+postvars = {'hello_ws.xml': ['<xml>\r\n\t<app>\r\n\t<input>\r\n\t\t<name>HelloWorld</name>\r\n\t\t<wwid>your_wid_here</wwid>\r\n\t\t<cmdpush>ws_c2dm</cmdpush>\r\n\t\t<gvar>GVARINPUT=</gvar>\r\n\t\t<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>\r\n\t\t<timeout>7 hour</timeout>\r\n\t</input>\r\n\t\t<stage>\r\n\t\t\t<name>HelloWorld</name> <type>SPC</type>\r\n\t\t\t<binary>medusalet_helloworld</binary>\t\t\r\n\t\t\t<trigger>none</trigger>\r\n\t\t\t<inst>Hello</inst> \r\n\t\t</stage>\r\n\t</app>\r\n</xml>']}
+pair =  <xml>
+	<app>
+	<input>
+		<name>HelloWorld</name>
+		<wwid>your_wid_here</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+		<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>
+		<timeout>7 hour</timeout>
+	</input>
+		<stage>
+			<name>HelloWorld</name> <type>SPC</type>
+			<binary>medusalet_helloworld</binary>		
+			<trigger>none</trigger>
+			<inst>Hello</inst> 
+		</stage>
+	</app>
+</xml>
+program/6689hello_ws.xml
+filenames=[['program/1423016756_6244.xml', 'HelloWorld']]
+[['program/1423016756_6244.xml', 'HelloWorld']]
+parent: 28760, child: 29077
+postvars = {'hello_ws.xml': ['<xml>\r\n\t<app>\r\n\t<input>\r\n\t\t<name>HelloWorld</name>\r\n\t\t<wwid>your_wid_here</wwid>\r\n\t\t<cmdpush>ws_c2dm</cmdpush>\r\n\t\t<gvar>GVARINPUT=</gvar>\r\n\t\t<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>\r\n\t\t<timeout>7 hour</timeout>\r\n\t</input>\r\n\t\t<stage>\r\n\t\t\t<name>HelloWorld</name> <type>SPC</type>\r\n\t\t\t<binary>medusalet_helloworld</binary>\t\t\r\n\t\t\t<trigger>none</trigger>\r\n\t\t\t<inst>Hello</inst> \r\n\t\t</stage>\r\n\t</app>\r\n</xml>']}
+pair =  <xml>
+	<app>
+	<input>
+		<name>HelloWorld</name>
+		<wwid>your_wid_here</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+		<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>
+		<timeout>7 hour</timeout>
+	</input>
+		<stage>
+			<name>HelloWorld</name> <type>SPC</type>
+			<binary>medusalet_helloworld</binary>		
+			<trigger>none</trigger>
+			<inst>Hello</inst> 
+		</stage>
+	</app>
+</xml>
+program/3907hello_ws.xml
+filenames=[['program/1423017293_2522.xml', 'HelloWorld']]
+[['program/1423017293_2522.xml', 'HelloWorld']]
+parent: 28760, child: 29419
+postvars = {'hello_ws.xml':68.181.99.207 - - [03/Feb/2015 18:49:24] "POST / HTTP/1.1" 200 -
+task tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203184924.txt'
+Client tom has disconnected.
+New connection from 149
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+68.181.99.207 - - [03/Feb/2015 18:49:55] "POST / HTTP/1.1" 200 -
+task tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203184955.txt'
+Traceback (most recent call last):
+  File "./mdscript_acceptor.py", line 186, in <module>
+    httpd = server_class((HOST_NAME, MEDUSA_PORT), MyHandler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+Client tom has disconnected.
+New connection from 154
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+68.181.99.207 - - [03/Feb/2015 18:52:48] "POST / HTTP/1.1" 200 -
+task tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203185249.txt'
+Client tom has disconnected.
+New connection from 48
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Client tom has disconnected.
+New connection from 94
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+68.181.99.207 - - [03/Feb/2015 19:04:42] "POST / HTTP/1.1" 200 -
+task tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203190442.txt'
+Client tom has disconnected.
+New connection from 99
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Client tom has disconnected.
+New connection from 104
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+68.181.99.207 - - [03/Feb/2015 19:10:54] "POST / HTTP/1.1" 200 -
+task tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203191054.txt'
+68.181.99.207 - - [03/Feb/2015 19:10:57] "POST / HTTP/1.1" 200 -
+task tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203191057.txt'
+[<socket._socketobject object at 0x7fbfd0814130>]
+{}
+Tue Feb  3 19:03:31 2015 Server Starts - 68.181.99.207:9001
+postvars = {'hello_ws.xml': ['<xml>\r\n\t<app>\r\n\t<input>\r\n\t\t<name>HelloWorld</name>\r\n\t\t<wwid>your_wid_here</wwid>\r\n\t\t<cmdpush>ws_c2dm</cmdpush>\r\n\t\t<gvar>GVARINPUT=</gvar>\r\n\t\t<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>\r\n\t\t<timeout>7 hour</timeout>\r\n\t</input>\r\n\t\t<stage>\r\n\t\t\t<name>HelloWorld</name> <type>SPC</type>\r\n\t\t\t<binary>medusalet_helloworld</binary>\t\t\r\n\t\t\t<trigger>none</trigger>\r\n\t\t\t<inst>Hello</inst> \r\n\t\t</stage>\r\n\t</app>\r\n</xml>']}
+pair =  <xml>
+	<app>
+	<input>
+		<name>HelloWorld</name>
+		<wwid>your_wid_here</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+		<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>
+		<timeout>7 hour</timeout>
+	</input>
+		<stage>
+			<name>HelloWorld</name> <type>SPC</type>
+			<binary>medusalet_helloworld</binary>		
+			<trigger>none</trigger>
+			<inst>Hello</inst> 
+		</stage>
+	</app>
+</xml>
+program/7579hello_ws.xml
+filenames=[['program/1423019082_8593.xml', 'HelloWorld']]
+[['program/1423019082_8593.xml', 'HelloWorld']]
+parent: 2958, child: 3053
+accepted
+postvars = {'hello_ws.xml': ['<xml>\r\n\t<app>\r\n\t<input>\r\n\t\t<name>HelloWorld</name>\r\n\t\t<wwid>your_wid_here</wwid>\r\n\t\t<cmdpush>ws_c2dm</cmdpush>\r\n\t\t<gvar>GVARINPUT=</gvar>\r\n\t\t<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>\r\n\t\t<timeout>7 hour</timeout>\r\n\t</input>\r\n\t\t<stage>\r\n\t\t\t<name>HelloWorld</name> <type>SPC</type>\r\n\t\t\t<binary>medusalet_helloworld</binary>\t\t\r\n\t\t\t<trigger>none</trigger>\r\n\t\t\t<inst>Hello</inst> \r\n\t\t</stage>\r\n\t</app>\r\n</xml>']}
+pair =  <xml>
+	<app>
+	<input>
+		<name>HelloWorld</name>
+		<wwid>your_wid_here</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+		<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>
+		<timeout>7 hour</timeout>
+	</input>
+		<stage>
+			<name>HelloWorld</name> <type>SPC</type>
+			<binary>medusalet_helloworld</binary>		
+			<trigger>none</trigger>
+			<inst>Hello</inst> 
+		</stage>
+	</app>
+</xml>
+program/971hello_ws.xml
+filenames=[['program/1423019454_8592.xml', 'HelloWorld']]
+[['program/1423019454_8592.xml', 'HelloWorld']]
+parent: 2958, child: 3227
+postvars = {'hello_ws.xml': ['<xml>\r\n\t<app>\r\n\t<input>\r\n\t\t<name>HelloWorld</name>\r\n\t\t<wwid>your_wid_here</wwid>\r\n\t\t<cmdpush>ws_c2dm</cmdpush>\r\n\t\t<gvar>GVARINPUT=</gvar>\r\n\t\t<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>\r\n\t\t<timeout>7 hour</timeout>\r\n\t</input>\r\n\t\t<stage>\r\n\t\t\t<name>HelloWorld</name> <type>SPC</type>\r\n\t\t\t<binary>medusalet_helloworld</binary>\t\t\r\n\t\t\t<trigger>none</trigger>\r\n\t\t\t<inst>Hello</inst> \r\n\t\t</stage>\r\n\t</app>\r\n</xml>']}
+pair =  <xml>
+	<app>
+	<input>
+		<name>HelloWorld</name>
+		<wwid>your_wid_here</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+		<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>
+		<timeout>7 hour</timeout>
+	</input>
+		<stage>
+			<name>HelloWorld</name> <type>SPC</type>
+			<binary>medusalet_helloworld</binary>		
+			<trigger>none</trigger>
+			<inst>Hello</inst> 
+		</stage>
+	</app>
+</xml>
+program/2219hello_ws.xml
+filenames=[['program/1423019457_7437.xml', 'HelloWorld']]
+[['program/1423019457_7437.xml', 'HelloWorld']]
+parent: 2958, child: 3232
+postvars = {'hello_ws.xml': ['<xml>\r\n\t<app>\r\n\t<input>\r\n\t\t<name>HelloWorld</name>\r\n\t\t<wwid>your_wid_here</wwid>\r\n\t\t<cmdpush>ws_c2dm</cmdpush>\r\n\t\t<gvar>GVARINPUT=</gvar>\r\n\t\t<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>\r\n\t\t<timeout>7 hour</timeout>\r\n\t</input>\r\n\t\t<stage>\r\n\t\t\t<name>HelloWorld</name> <type>SPC</type>\r\n\t\t\t<binary>medusalet_helloworld</binary>\t\t\r\n\t\t\t<trigger>none</trigger>\r\n\t\t\t<inst>Hello</inst> \r\n\t\t</stage>\r\n\t</app>\r\n</xml>']}
+pair =  <xml>
+	<app>
+	<input>
+		<name>HelloWorld</name>
+		<wwid>your_wid_here</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+		<68.181.99.207 - - [03/Feb/2015 19:10:58] "POST / HTTP/1.1" 200 -
+task tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203191058.txt'
+68.181.99.207 - - [03/Feb/2015 19:10:59] "POST / HTTP/1.1" 200 -
+task tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203191059.txt'
+Client tom has disconnected.
+New connection from 109
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Client tom has disconnected.
+New connection from 114
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Traceback (most recent call last):
+  File "./mdscript_acceptor.py", line 186, in <module>
+    httpd = server_class((HOST_NAME, MEDUSA_PORT), MyHandler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+PHP Fatal error:  Uncaught exception 'ZMQSocketException' with message 'Failed to bind the ZMQ: Address already in use' in /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/vendor/react/zmq/src/React/ZMQ/SocketWrapper.php:114
+Stack trace:
+#0 [internal function]: ZMQSocket->bind('tcp://127.0.0.1...')
+#1 /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/vendor/react/zmq/src/React/ZMQ/SocketWrapper.php(114): call_user_func_array(Array, Array)
+#2 /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/bin/chat-server.php(13): React\ZMQ\SocketWrapper->__call('bind', Array)
+#3 /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/bin/chat-server.php(13): React\ZMQ\SocketWrapper->bind('tcp://127.0.0.1...')
+#4 {main}
+  thrown in /home/yitao/tom_www/Medusa/medusa-cloud/ws_server_php/vendor/react/zmq/src/React/ZMQ/SocketWrapper.php on line 114
+Client tom has disconnected.
+New connection from 119
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+68.181.99.207 - - [03/Feb/2015 19:18:20] "POST / HTTP/1.1" 200 -
+task tracker id is HelloWorld
+Traceback (most recent call last):
+  File "mdserv2.py", line 766, in <module>
+    task_main(parse_args())
+  File "mdserv2.py", line 110, in parse_args
+    mdlib.log('* verified input file: [' + filename + ']')
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 32, in log
+    log_init()
+  File "/home/yitao/tom_www/Medusa/medusa-cloud/tasktracker/mdlib.py", line 25, in log_init
+    logfile = open("logs/log_{0}.txt".format(datetime.now().strftime("%Y%m%d%H%M%S")), "w+")
+IOError: [Errno 2] No such file or directory: 'logs/log_20150203191820.txt'
+Client tom has disconnected.
+New connection from 124
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Client tom has disconnected.
+New connection from 129
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Client tom has disconnected.
+New connection from 134
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Client tom has disconnected.
+New connection from 139
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+Client tom has disconnected.
+New connection from 144
+Received message: {"payload":"tom","type":"medusaid"} from client tom.
+68.181.99.207 - - [17/Feb/2015 14:49:32] "POST / HTTP/1.1" 200 -
+onMedusaCmdPush: {"medusaid":"tom","payload":"<xml><pid>3788<\/pid><qid>5221<\/qid><amtid>tom<\/amtid><stage><name>HelloWorld<\/name><type>SPC<\/type><binary>medusalet_helloworld<\/binary><trigger>none<\/trigger><inst>Hello<\/inst><\/stage><\/xml>"}
+68.181.99.207 - - [17/Feb/2015 14:50:01] "POST / HTTP/1.1" 200 -
+onMedusaCmdPush: {"medusaid":"tom","payload":"<xml><pid>3799<\/pid><qid>5200<\/qid><amtid>tom<\/amtid><stage><name>HelloWorld<\/name><type>SPC<\/type><binary>medusalet_helloworld<\/binary><trigger>none<\/trigger><inst>Hello<\/inst><\/stage><\/xml>"}
