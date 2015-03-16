@@ -38,9 +38,9 @@ public class G
 	 * *************************************************************************************
 	 */
 	/* Medusa cloud configuration */
-	public static final String SERVER_URL = "xxx.xxx.xxx.xxx";	/* Task tracker location */
-	public static final String URIBASE_UPLOAD = "http://" + SERVER_URL + "/Medusa/medusa-cloud/tasktracker/web_tt_upload.php";
-	public static final String URIBASE_REPORT = "http://" + SERVER_URL + "/Medusa/medusa-cloud/tasktracker/web_tt_service.php";
+	public static final String SERVER_URL = "68.181.99.207";	/* Task tracker location */
+	public static final String URIBASE_UPLOAD = "http://" + SERVER_URL + "/tom_www/Medusa/medusa-cloud/tasktracker/web_tt_upload.php";
+	public static final String URIBASE_REPORT = "http://" + SERVER_URL + "/tom_www/Medusa/medusa-cloud/tasktracker/web_tt_service.php";
 	/* For using reverse incentives */
 	public static final String AMT_WRID = "AKIAJ4DYABCDEFGHIJKL";	/* Worker's AMT Requestor ID */		 
 	public static final String AMT_WRKEY = "oyg+tsrPO3cQ85abcdefghijklmnopqrstuvwxyz";	/* Worker's AMT Requestor Key. */

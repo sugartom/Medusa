@@ -9,11 +9,21 @@
 
 package medusa.medusalet.genmetadata2;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
 import android.database.sqlite.SQLiteCursor;
+import android.media.ExifInterface;
+import android.os.Environment;
 import android.text.format.Time;
+import android.util.Log;
+import android.widget.Toast;
+import medusa.mobile.client.MedusaExifManager;
 import medusa.mobile.client.MedusaStorageManager;
 import medusa.mobile.client.MedusaStorageTextFileAdapter;
 import medusa.mobile.client.MedusaTransformFFmpegAdapter2;
@@ -24,6 +34,11 @@ import medusa.mobile.client.G;
 public class MedusaletMain extends MedusaletBase 
 {
 	private final String TAG = "MedusaGenerateMetadata";
+	private final String TAG_LIU = "_____________________";
+	private final String CAMERA_DIR = "/DCIM/";
+    private final String RECORD_NAME = "MedusaCam_data/Metadata.txt";
+    private final int MIN_TAG_NUM = 2;
+    
 	ArrayList<String> resultData;
 	
 	private long beforeSeconds = 600;   //10 minutes for default setting
@@ -74,18 +89,52 @@ public class MedusaletMain extends MedusaletBase
     		}
     	}
     };
+    
+    /** Created by Xiaochen 0219 */
+    private String getMetadata(String din) {
+    	/*
+    	 	format (splitted by space):
+    	 	 	char:			name
+        		long int:		time		
+        		---- min ----	
+        		int:			cars，faces,
+                char:			sceneTag,
+                float/double:	angleOfView, light, acc-3, mag-3, bearing-3, gps-3
+                
+                more metadata on the way....
+    	 */
+    	String [] dataList = din.split(" ");
+    	if (dataList.length < MIN_TAG_NUM) { // MIN_TAG_NUM = 4 (name, time, cars, faces)
+    		Log.i(TAG_LIU, "metadata has too few items! din: " + din);
+    		return "error";
+    	}
+    	String metadata = "";
+    	for (int i = 1; i < dataList.length; i++) {	// ignore the name at first
+    		if (i == 1) // long int timestamp
+    			dataList[i] = "\"" + dataList[i] + "\",";
+    		else if (i < 4) // int values (cars, faces)
+    			dataList[i] = dataList[i] + ",";	
+    		else { // other metadata
+    			if (i == dataList.length - 1)			// last item
+    				dataList[i] = "\"" + dataList[i] + "\"";
+    			else									// float with one value
+    				dataList[i] = "\"" + dataList[i] + "\",";
+    		}
+    		metadata += dataList[i];
+    	}
+    	Log.i(TAG_LIU, "metadata: " + metadata);
+    	return metadata;
+    }
 	    
+    // mod by Xiaochen
     MedusaletCBBase cbGet = new MedusaletCBBase() {
     	public void cbPostProcess(Object data, String msg) 
     	{
-    		MedusaUtil.log(TAG, "HERE.");
-    		
     		if (data != null) {
         		SQLiteCursor cr = (SQLiteCursor)data;
         		/* send raw video files */
         		if (cr.moveToFirst()) {
         			do {
-        				
         				String uid = cr.getString(0);
         				String type = cr.getString(1);
         				String file = cr.getString(2);
@@ -94,30 +143,35 @@ public class MedusaletMain extends MedusaletBase
         				String lng = cr.getString(4);
         				String size = cr.getString(6);
         				MedusaUtil.log(TAG, "file name: "+file);
-        				if(type.equals("video")==true)
-        				{
-        					String dat = "\"" + G.C2DM_ID + "\"," + uid + ",\"" + MedusaTransformFFmpegAdapter2.FrameFeature(file, 10) + "\","+lat+","+lng+"," + time+','+size;
-        					MedusaUtil.log(TAG, "dat: "+dat);
-        					resultData.add(dat);
-        				}
-        				else if (type.equals("image"))
-        				{
-        					String dat = "\"" + G.C2DM_ID + "\"," + uid + ",\"" + MedusaTransformFFmpegAdapter2.ImgFeature(file) + "\","+lat+","+lng+"," + time+','+size;
-        					MedusaUtil.log(TAG, "dat: "+dat);
-        					resultData.add(dat);
-        				}
+        				Log.i(TAG_LIU, "file name: " + file);
+        				
         				/*
-        				if (type.compareTo("image") == 0)
-        				{
-                            Bitmap _bitmap = MedusaOpencv.decodeFile(file);
-                            MedusaOpencv.save(_bitmap, file);
-        					String dat = "\"" + G.C2DM_ID + "\"," + uid + "," + MedusaOpencv.FaceDetect(_bitmap)+","+MedusaOpencv.genMetadata(file) + ","+lat+","+lng+"," + time+','+size;
-        					//resultData.add("\"" + G.C2DM_ID + "\"," + uid + "," + MedusaOpencv.genMetadata(file) + ",0,0," + time);
-        					MedusaUtil.log(TAG, "dat: "+dat);
+        				 * get photo metadata
+        				 */
+        				if (type.equals("image")) {
+        					MedusaExifManager exifManager = new MedusaExifManager();
+        					String imageName = file.split("/")[file.split("/").length - 1];
+        					String imagePath = Environment.getExternalStorageDirectory() + CAMERA_DIR + RECORD_NAME;
+        					String dat = "\"" + G.C2DM_ID + "\"," + 
+        								uid + 
+        								",\"" + MedusaTransformFFmpegAdapter2.ImgFeature(file) + "\"," + 
+        								lat+","+lng+"," + time+','+size + ',' + 
+        								getMetadata(readFile(imagePath, imageName));
+        					Log.i(TAG_LIU, "dat: " + dat);
         					resultData.add(dat);
-        					//"3,3,0,0," + time);
         				}
-        				*/
+
+        				/*
+        				 * get video metadata
+        				 */
+        				if(type.equals("video")) {
+        					String dat = "\"" + G.C2DM_ID + "\"," + 
+        								uid + 
+        								",\"" + "video_cedd" + "\"," +  /*MedusaTransformFFmpegAdapter2.FrameFeature(file, 10)*/
+        								lat+","+lng+"," + time+','+size;
+        					Log.i(TAG_LIU, "video metadat upload: " + dat);
+        					resultData.add(dat);
+        				}
 
         			} while(cr.moveToNext());
         			
@@ -192,5 +246,37 @@ public class MedusaletMain extends MedusaletBase
     	super.exit();
     	
     	MedusaStorageManager.requestServiceUnsubscribe(TAG, cbReg, "text");
+    }
+    
+    // read file: line by line
+    // added by Xiaochen
+    public String readFile(String filePath, String photoName){
+        File tempFile = new File(filePath);
+        BufferedReader reader;
+        String funcResult = "";
+        if (tempFile.exists()){
+            try{
+                reader = new BufferedReader(new FileReader(tempFile));
+                String tempLine;
+                while ((tempLine = reader.readLine()) != null) {
+                    // Do something here...
+                    if(tempLine.contains(photoName)) {
+                    	funcResult = tempLine;
+                    	break;
+                    }
+                }
+                reader.close();
+            } catch (FileNotFoundException e) {
+                Log.i(TAG, "file not found!");
+                e.printStackTrace();
+            } catch (IOException e) {
+                Log.i(TAG,"File reading error!");
+                e.printStackTrace();
+            }
+        }
+        else{
+            Log.i(TAG, "file not found!");
+        }
+        return funcResult;
     }
 }
