@@ -23,7 +23,6 @@ import android.os.Environment;
 import android.text.format.Time;
 import android.util.Log;
 import android.widget.Toast;
-import medusa.mobile.client.MedusaExifManager;
 import medusa.mobile.client.MedusaStorageManager;
 import medusa.mobile.client.MedusaStorageTextFileAdapter;
 import medusa.mobile.client.MedusaTransformFFmpegAdapter2;
@@ -31,13 +30,13 @@ import medusa.mobile.client.MedusaUtil;
 import medusa.mobile.client.MedusaletBase;
 import medusa.mobile.client.MedusaletCBBase;
 import medusa.mobile.client.G;
+
 public class MedusaletMain extends MedusaletBase 
 {
 	private final String TAG = "MedusaGenerateMetadata";
 	private final String TAG_LIU = "_____________________";
 	private final String CAMERA_DIR = "/DCIM/";
-    private final String RECORD_NAME = "MedusaCam_data/Metadata.txt";
-    private final int MIN_TAG_NUM = 2;
+    private final String RECORD_NAME = "MedusaCam_data/MetadataPhoto.txt";
     
 	ArrayList<String> resultData;
 	
@@ -90,35 +89,27 @@ public class MedusaletMain extends MedusaletBase
     	}
     };
     
-    /** Created by Xiaochen 0219 */
+    /** Created by Xiaochen 0331 */
     private String getMetadata(String din) {
-    	/*
-    	 	format (splitted by space):
-    	 	 	char:			name
-        		long int:		time		
-        		---- min ----	
-        		int:			cars，faces,
-                char:			sceneTag,
-                float/double:	angleOfView, light, acc-3, mag-3, bearing-3, gps-3
-                
-                more metadata on the way....
-    	 */
+        /*
+            Medusa:         "C2DM_ID", UID, "CEDD(img)", lat, lng, Create_time, File_size
+            Cam (meta):     "file_name", cars, faces, blur, "sceneTag, AngleOfView, Light, ACC(3), Mag(3), Bearing(3), Loc&Acc(3)"
+         */
     	String [] dataList = din.split(" ");
-    	if (dataList.length < MIN_TAG_NUM) { // MIN_TAG_NUM = 4 (name, time, cars, faces)
+    	if (dataList.length < 1) {  // file name is at the first
     		Log.i(TAG_LIU, "metadata has too few items! din: " + din);
     		return "error";
     	}
-    	String metadata = "";
-    	for (int i = 1; i < dataList.length; i++) {	// ignore the name at first
-    		if (i == 1) // long int timestamp
-    			dataList[i] = "\"" + dataList[i] + "\",";
-    		else if (i < 4) // int values (cars, faces)
-    			dataList[i] = dataList[i] + ",";	
-    		else { // other metadata
-    			if (i == dataList.length - 1)			// last item
-    				dataList[i] = "\"" + dataList[i] + "\"";
-    			else									// float with one value
-    				dataList[i] = "\"" + dataList[i] + "\",";
+    	
+    	String metadata = "\"" + dataList[0] + "\",";		// item 0: file name
+    	for (int i = 1; i < dataList.length; i++) {	
+    		if (i == 4)                                	// "indoor/outdoor tag"
+    			dataList[i] = "\"" + dataList[i] + "\",";	
+    		else {                                    	// other metadata
+    			if (i == dataList.length - 1)				// last item
+    				dataList[i] = dataList[i];
+    			else										// float with one value
+    				dataList[i] = dataList[i] + ",";
     		}
     		metadata += dataList[i];
     	}
@@ -148,31 +139,36 @@ public class MedusaletMain extends MedusaletBase
         				/*
         				 * get photo metadata
         				 */
+
         				if (type.equals("image")) {
-        					MedusaExifManager exifManager = new MedusaExifManager();
         					String imageName = file.split("/")[file.split("/").length - 1];
         					String imagePath = Environment.getExternalStorageDirectory() + CAMERA_DIR + RECORD_NAME;
+                            /*
+                             Medusa:        "C2DM_ID", UID, "CEDD(img)", lat, lng, Create_time, File_size,
+                             Cam (meta):    "file_name", cars, faces, blur, "sceneTag, AngleOfView, Light, ACC(3), Mag(3), Bearing(3), Loc&Acc(3)"
+                             */
         					String dat = "\"" + G.C2DM_ID + "\"," + 
         								uid + 
         								",\"" + MedusaTransformFFmpegAdapter2.ImgFeature(file) + "\"," + 
-        								lat+","+lng+"," + time+','+size + ',' + 
+        								lat + "," + lng + "," + time + ',' + size + ',' + 
         								getMetadata(readFile(imagePath, imageName));
         					Log.i(TAG_LIU, "dat: " + dat);
         					resultData.add(dat);
         				}
 
         				/*
-        				 * get video metadata
+        				 * get video metadata - no videos at present
         				 */
+                        /*
         				if(type.equals("video")) {
         					String dat = "\"" + G.C2DM_ID + "\"," + 
         								uid + 
-        								",\"" + "video_cedd" + "\"," +  /*MedusaTransformFFmpegAdapter2.FrameFeature(file, 10)*/
+        								",\"" + "video_cedd" + "\"," +  // MedusaTransformFFmpegAdapter2.FrameFeature(file, 10)
         								lat+","+lng+"," + time+','+size;
         					Log.i(TAG_LIU, "video metadat upload: " + dat);
         					resultData.add(dat);
         				}
-
+                        */
         			} while(cr.moveToNext());
         			
         			cr.close();

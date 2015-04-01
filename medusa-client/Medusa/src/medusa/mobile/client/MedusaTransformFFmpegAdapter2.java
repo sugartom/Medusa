@@ -6,7 +6,6 @@ import java.io.FileOutputStream;
 
 import net.semanticmetadata.lire.imageanalysis.CEDD;
 import net.semanticmetadata.lire.imageanalysis.LireFeature;
-
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -26,6 +25,9 @@ public class MedusaTransformFFmpegAdapter2 {
 	private static int FPS = 1;
 	private static float Threshold = 20;
 	private static String ImgName = "/sdcard/ffmpeg_temp_save.jpg";
+	
+	private final static String TAG_LIU = "**********************";
+	
 	//private static FFmpeg adapter;
 	public static void initialize() {
 		if (bInit == false) {
@@ -78,31 +80,39 @@ public class MedusaTransformFFmpegAdapter2 {
 		}
 		
 	}
+	
+	// modified by Xiaochen 0219
 	public static String ImgFeature(String path)
 	{
 		CEDD cedd = new CEDD();
-		Bitmap bmp = BitmapFactory.decodeFile(path);
+		Bitmap bmp_o = BitmapFactory.decodeFile(path);
+		// resize the image
+		Bitmap bmp = Bitmap.createScaledBitmap(bmp_o,200,200,true);
 		cedd.extract(bmp);
 		String feature = cedd.getStringRepresentation();
 		return feature;
-	
 	}
+	
 	public static String FrameFeature ( String path, int video_length)
 	{
-		
-
 		MedusaTransformFFmpegAdapter2.initialize();
 		MedusaTransformFFmpegAdapter2 adapter = new MedusaTransformFFmpegAdapter2();
+		Log.i(TAG_LIU, "adapter inited");
 		//bmp = Bitmap.createBitmap(target_width, target_height, Bitmap.Config.ARGB_8888);
 		Bitmap [] mBMP = new Bitmap [video_length];
 		adapter.openFile(path);
+		Log.i(TAG_LIU, "file opened");
 		//byte[][] BT = new byte[video_length][];
 		String feature = "";
 		CEDD cedd1 = new CEDD();
 		CEDD cedd2 = new CEDD();
+		Log.i(TAG_LIU, "CEDD newed");
+		
 		for(int i = 1; i < video_length; i += FPS)
 		{
 			mBMP[i] = Bitmap.createBitmap(target_width, target_height, Bitmap.Config.ARGB_8888);
+			// mBMP[i] = Bitmap.createScaledBitmap(mBMP[i],200,200,true);
+			Log.i(TAG_LIU, "resized");
 			adapter.drawFrameAt(mBMP[i], i, target_width, target_height);
 			if (i == 1)
 			{
@@ -110,6 +120,7 @@ public class MedusaTransformFFmpegAdapter2 {
 				mBMP[i] = BitmapFactory.decodeFile(ImgName);
 				cedd1.extract(mBMP[i]);
 				feature =Integer.toString(i) +" " +cedd1.getStringRepresentation() ;
+				Log.i(TAG_LIU, i + feature);
 			}
 			else
 			{
@@ -123,6 +134,7 @@ public class MedusaTransformFFmpegAdapter2 {
 				//	cedd1 = new CEDD();
 					cedd1.extract(mBMP[i]);
 					feature += "|" +Integer.toString(i) +" " + cedd1.getStringRepresentation();
+					Log.i(TAG_LIU, i + feature);
 				}
 			}
 			
