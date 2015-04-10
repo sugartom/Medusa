@@ -470,16 +470,36 @@ public class MedusaStorageManager extends MedusaManagerBase {
 		}
 
 		if (cr.getCount() == 0) {
-			sb.append("INSERT into mediameta(path,type,fsize,mtime) VALUES('");
-			sb.append(path + "','" + dtype + "','" + size + "','" + time + "');");
 			
-			Log.v(TAG, "* adding new entry to metadata table fname=" + sb.toString() + ", type=" + dtype);
-			MedusaStorageManager.requestServiceSQLite(medusaletname, null, "medusadata.db", sb.toString());
+			// begin of Yitao's change
+			String[] splitPath = path.split("/");
+			Log.v(TAG, "file name is " + splitPath[splitPath.length - 1]);
 			
-			MedusaGpsManager.requestUpdateGpsOnMetaTable(medusaletname, path, 60000 /* default timeout: 1000 minutes */);
+			String[] splitFileName = splitPath[splitPath.length - 1].split("_");
+			Log.v(TAG, "file name's size is " + splitFileName.length);
+			// end of Yitao' change
 			
-			// Announce new events to the subscribers.
-			MedusaStorageManager.getInstance().announceToSubscribers(dtype, path, "* FILE CREATED");
+			boolean yitaoFlag = true;
+			
+			if ((dtype == "image") && (splitFileName.length != 4)) {
+				Log.v(TAG, "the file is image, and it has length: " + splitFileName.length);
+				yitaoFlag = false;
+			}
+			
+			if (yitaoFlag) {
+				sb.append("INSERT into mediameta(path,type,fsize,mtime) VALUES('");
+				sb.append(path + "','" + dtype + "','" + size + "','" + time + "');");
+				
+				Log.v(TAG, "* adding new entry to metadata table fname=" + sb.toString() + ", type=" + dtype);
+//				Log.e(TAG, "* adding new entry to metadata table fname=" + sb.toString() + ", type=" + dtype);		// Yitao changed Log.v to Log.e
+	
+				MedusaStorageManager.requestServiceSQLite(medusaletname, null, "medusadata.db", sb.toString());
+				
+				MedusaGpsManager.requestUpdateGpsOnMetaTable(medusaletname, path, 60000 /* default timeout: 1000 minutes */);
+				
+				// Announce new events to the subscribers.
+				MedusaStorageManager.getInstance().announceToSubscribers(dtype, path, "* FILE CREATED");
+			}
 		}
 		else {
 			/* data is already existed */
