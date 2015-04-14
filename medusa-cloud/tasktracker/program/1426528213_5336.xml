@@ -1,0 +1,16 @@
+<xml>
+	<app>
+	<name>HelloWorld</name>
+		<wwid>tom2</wwid>
+		<cmdpush>ws_c2dm</cmdpush>
+		<gvar>GVARINPUT=</gvar>
+		<rrkey>ZDijBdROJrc6TViueBWYVhD5o8hSVzv9Civaj+Zl</rrkey>
+		<timeout>7 hour</timeout>
+	<stage>
+			<name>HelloWorld</name> <type>SPC</type>
+			<binary>medusalet_helloworld</binary>		
+			<trigger>none</trigger>
+			<inst>Hello</inst> 
+		</stage>
+	</app>
+</xml>

@@ -1,0 +1,33 @@
+0:00:00.000091, * verified input file: [program/1428691689_7935.xml]
+0:00:00.000140, ********************************
+0:00:00.000154, *       Task-Flow Server       *
+0:00:00.000164, ********************************
+0:00:00.000172, * starting task-flow server(TFS).
+0:00:00.036248, * APP [METADATA-GENERATOR] started
+0:00:00.037315, * parsing completed.
+0:00:00.037351, * starting parameter type checking.
+0:00:00.037805, * [overhead] task interpretation delay: 0:00:00.037923
+0:00:00.037837, * done for type checking.
+0:00:00.037859, * pid=29990
+0:00:00.038482, Global input var name GVARSTARTUID is 1
+0:00:00.038559, * qid[0]=9557
+0:00:00.038612, * [overhead] task tracker latency amonst stages: 0:00:00.000806
+0:00:00.038638, * SPC Task [GenerateMetadata]
+0:00:00.039212, * [overhead] http request latency: 0:00:00.000585
+0:00:00.061904, * [overhead] http response latency: 0:00:00.022681
+0:00:00.061935, * sms cmd msg has been sent to userid=alice
+0:00:01.600597, * RS results user=alice, msg=5
+0:00:01.600648, * [overhead] SPC task execution time: 0:00:01.538747
+0:00:01.601045, * AMT credential has been updated.
+0:00:01.601071, {'GVARSTARTUID': '1', 'GENMETADATA': '5'}
+0:00:01.601100, * qid[0]=6829
+0:00:01.601116, * [overhead] task tracker latency amonst stages: 0:00:00.000467
+0:00:01.601125, * SPC Task [UploadData]
+0:00:01.601314, * [overhead] http request latency: 0:00:00.000192
+0:00:01.617975, * [overhead] http response latency: 0:00:00.016637
+0:00:01.618009, * sms cmd msg has been sent to userid=alice
+0:00:02.383002, * RS results user=alice, msg=5
+0:00:02.383049, * [overhead] SPC task execution time: 0:00:00.765080
+0:00:02.383352, * AMT credential has been updated.
+0:00:02.383380, {'GVARSTARTUID': '1', 'GENMETADATA': '5'}
+0:00:02.383397, * shutting down task-flow server..

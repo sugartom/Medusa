@@ -1,0 +1,23 @@
+0:00:00.000079, * verified input file: [program/1428423044_7436.xml]
+0:00:00.000130, ********************************
+0:00:00.000149, *       Task-Flow Server       *
+0:00:00.000164, ********************************
+0:00:00.000178, * starting task-flow server(TFS).
+0:00:00.032923, * APP [PHOTO_UPLOAD_142842304463936603] started
+0:00:00.033828, * parsing completed.
+0:00:00.033888, * starting parameter type checking.
+0:00:00.034030, * [overhead] task interpretation delay: 0:00:00.034137
+0:00:00.034080, * done for type checking.
+0:00:00.034110, * pid=8600
+0:00:00.034570, Global input var name GVARINPUT is 3:101:10|3:101:10|3:101:10|3:101:10|5:100:10|5:100:10|5:100:10|5:100:10|2:95:10|5:94:10
+0:00:00.034605, * qid[0]=1236
+0:00:00.034626, * [overhead] task tracker latency amonst stages: 0:00:00.000602
+0:00:00.034639, * SPC Task [UploadData]
+0:00:00.034959, * [overhead] http request latency: 0:00:00.000327
+0:00:00.054587, * [overhead] http response latency: 0:00:00.019616
+0:00:00.054629, * sms cmd msg has been sent to userid=tom
+0:00:02.529779, * RS results user=tom, msg=3|2|5
+0:00:02.529821, * [overhead] SPC task execution time: 0:00:02.475235
+0:00:02.530266, * AMT credential has been updated.
+0:00:02.530291, {'GVARINPUT': '3:101:10|3:101:10|3:101:10|3:101:10|5:100:10|5:100:10|5:100:10|5:100:10|2:95:10|5:94:10'}
+0:00:02.530309, * shutting down task-flow server..

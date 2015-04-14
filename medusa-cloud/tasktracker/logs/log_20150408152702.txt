@@ -1,0 +1,18 @@
+0:00:00.000066, * verified input file: [program/1428532022_8023.xml]
+0:00:00.000111, ********************************
+0:00:00.000125, *       Task-Flow Server       *
+0:00:00.000136, ********************************
+0:00:00.000145, * starting task-flow server(TFS).
+0:00:00.027725, * APP [METADATA-GENERATOR] started
+0:00:00.028379, * parsing completed.
+0:00:00.028401, * starting parameter type checking.
+0:00:00.028612, * [overhead] task interpretation delay: 0:00:00.028739
+0:00:00.028628, * done for type checking.
+0:00:00.028639, * pid=22365
+0:00:00.029077, Global input var name GVARSTARTUID is 1
+0:00:00.029119, * qid[0]=1792
+0:00:00.029136, * [overhead] task tracker latency amonst stages: 0:00:00.000522
+0:00:00.029144, * SPC Task [GenerateMetadata]
+0:00:00.029444, * [overhead] http request latency: 0:00:00.000301
+0:00:00.053055, * [overhead] http response latency: 0:00:00.023592
+0:00:00.053101, * sms cmd msg has been sent to userid=tom

@@ -11,5 +11,6 @@ Thumbs.db
 # ignore my unversiond stuffs
 My_unversioned_stuff/
 
-medusa-cloud/tasktracker/program/*.xml
-medusa-cloud/tasktracker/logs/*.txt
+# medusa-cloud/tasktracker/program/*.xml
+# medusa-cloud/tasktracker/logs/*.txt
+medusa-cloud/tasktracker/data

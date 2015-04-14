@@ -1,0 +1,18 @@
+0:00:00.000071, * verified input file: [program/1428447702_4672.xml]
+0:00:00.000117, ********************************
+0:00:00.000133, *       Task-Flow Server       *
+0:00:00.000143, ********************************
+0:00:00.000153, * starting task-flow server(TFS).
+0:00:00.026288, * APP [PHOTO_UPLOAD_142844770236674558] started
+0:00:00.026817, * parsing completed.
+0:00:00.026850, * starting parameter type checking.
+0:00:00.026945, * [overhead] task interpretation delay: 0:00:00.027073
+0:00:00.026968, * done for type checking.
+0:00:00.026980, * pid=10601
+0:00:00.027255, Global input var name GVARINPUT is 10:100:1
+0:00:00.027294, * qid[0]=4713
+0:00:00.027314, * [overhead] task tracker latency amonst stages: 0:00:00.000368
+0:00:00.027327, * SPC Task [UploadData]
+0:00:00.027629, * [overhead] http request latency: 0:00:00.000309
+0:00:00.052505, * [overhead] http response latency: 0:00:00.024864
+0:00:00.052553, * sms cmd msg has been sent to userid=tom
